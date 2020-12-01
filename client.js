@@ -12,7 +12,8 @@ const connect = function() {
    conn.on("connect", () =>{
      console.log("Successfully connected to game server")
      conn.write("Name: KEL")
-   })
+    
+    })
    conn.on("close", () => {
      console.log("you ded cuz you idled")
    })
@@ -23,3 +24,16 @@ const connect = function() {
 
 
 module.exports = connect;
+
+
+/**
+ *  const moves = ['Move: up','Move: down','Move: up','Move: down', 'Move: left', 'Move: right','Move: up','Move: down',  'Move: left', 'Move: right', 'Move: left', 'Move: right','Move: up','Move: down', 'Move: left', 'Move: right']
+     for (const move of moves) {
+     for (let i = 1; i <= moves.length ; i++) { // moveup with timeout delay
+      setTimeout(() => {
+      conn.write(move);
+      }, 100 * i)
+      };
+    }
+ * 
+ */
